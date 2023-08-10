@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game : GUESS THE NUMBER</title>
+</head>
+<body>
+    <section>
+        <div>
+            <h1>Enter a guess between 0 to 100</h1>
+            <input type="number" placeholder="Enter Number" id="input">
+            <br>
+            <br>
+            <button onclick="submitHandler()">Submit</button>
+            <button  id="start" onclick="startHandler()" disabled>Start Game</button>
+            <h3 id="value"></h3>
+            <span id=""></span>
+            <h3 id="guesses" ></h3>
+        </div>
+    </section>
+
+    <script>
+        let value=document.getElementById("value");
+        let guesses=document.getElementById("guesses");
+        let start=document.getElementById("start");
+        
+        let randomNumber=Math.round(Math.random() * 100); ;
+        console.log(randomNumber)
+
+        let arr=[];
+        
+        const submitHandler = () =>{
+            
+                let input=parseInt(document.getElementById("input").value);
+                arr.push(input);
+                
+                guesses.innerHTML=`Your Guesses : ${arr}`;
+
+                if(input > randomNumber){
+                    value.innerHTML="Too High";
+                }
+                else if(input < randomNumber){
+                    value.innerHTML="Too Low!";
+                }
+                else{
+                    value.innerHTML="You Won......!";
+                    start.disabled=false;
+
+                }
+            }
+            
+            const startHandler = () =>{
+                input.value="";
+                value.innerHTML="";
+                guesses.innerHTML='';
+
+            }
+        
+
+
+
+
+
+
+    </script>
+</body>
+</html>
