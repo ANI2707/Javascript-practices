@@ -1,0 +1,21 @@
+#value {
+    font-size: 50px;
+    text-align: center;
+    animation: you-won 1s linear infinite;
+  }
+  
+  @keyframes you-won {
+    0% {
+      transform: scale(1);
+      color: #ff0000;
+    }
+    50% {
+      transform: scale(1.5);
+      color: #00ff00;
+    }
+    100% {
+      transform: scale(1);
+      color: #ff0000;
+    }
+  }
+  
