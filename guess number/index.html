@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Game : GUESS THE NUMBER</title>
 </head>
 <body>
     <section>
         <div>
-            <h1>Enter a guess between 0 to 100</h1>
+            <h1>Enter a guess between 0 to 10</h1>
             <input type="number" placeholder="Enter Number" id="input">
             <br>
             <br>
@@ -25,7 +26,7 @@
         let guesses=document.getElementById("guesses");
         let start=document.getElementById("start");
         
-        let randomNumber=Math.round(Math.random() * 100); ;
+        let randomNumber=Math.round(Math.random() * 10)+1; ;
         console.log(randomNumber)
 
         let arr=[];
